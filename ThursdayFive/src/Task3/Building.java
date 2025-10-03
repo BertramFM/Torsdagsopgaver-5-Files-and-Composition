@@ -6,9 +6,16 @@ public class Building {
     private int numberOfFloors;
 
 
-    public Building(ArrayList<Room> rooms, int numberOfFloors) {
-        this.rooms = rooms;
+    public Building(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
+    }
+
+    public void addRoom(Room room){
+        rooms.add(room);
+    }
+
+    public int countRooms (){
+        return getRooms().size();
     }
 
     public ArrayList<Room> getRooms() {
@@ -26,4 +33,21 @@ public class Building {
     public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
+
+    public int countLamps(Building building){
+        int total = 0;
+        for(Room r: building.getRooms()){
+            total += r.getNumberOfLamps();
+        }
+        return total;
+    }
+
+    public int countWindows(Building building){
+        int total = 0;
+        for (Room r : building.getRooms()){
+            total += r.getNumberOfWindows();
+        }
+        return total;
+    }
+
 }
