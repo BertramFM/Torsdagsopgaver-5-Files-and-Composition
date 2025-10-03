@@ -22,7 +22,7 @@ public class Cafe {
             }
             sc.close();
         } catch (FileNotFoundException e) {
-            System.err.println("File not found"); // Marks the error message in red
+            System.err.println("File not found"); // "err" Marks the error message in red
         }
     }
 }
