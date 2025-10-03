@@ -16,15 +16,13 @@ public class Cafe {
 
         try {
             Scanner sc = new Scanner(file);
-
             while(sc.hasNextLine()) {
                 String coffe = sc.nextLine();
                 coffeMenu.add(coffe);
             }
             sc.close();
-
         } catch (FileNotFoundException e) {
-            System.out.println("File not found");
+            System.err.println("File not found"); // Marks the error message in red
         }
     }
 }

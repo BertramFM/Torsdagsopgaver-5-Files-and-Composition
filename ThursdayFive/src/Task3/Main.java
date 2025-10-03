@@ -49,5 +49,4 @@ public class Main {
     public static boolean isNormal(Building building){
         return building.getNumberOfFloors() <= building.getRooms().size();
     }
-
 }
